@@ -1,0 +1,9 @@
+{
+  "updated_local": "Not updated yet",
+  "sources": ["RSS"],
+  "items": [
+    { "title": "Waiting for the first weekly update…", "link": "https://github.com", "source": "—", "published": "—" },
+    { "title": "Once the Action runs, real headlines will appear here.", "link": "https://github.com", "source": "—", "published": "—" },
+    { "title": "You can also manually run the Action anytime.", "link": "https://github.com", "source": "—", "published": "—" }
+  ]
+}
