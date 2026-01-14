@@ -1,0 +1,34 @@
+name: Weekly Finance News Update
+
+on:
+  schedule:
+    # Runs every Monday at 16:05 UTC (~8am PT in summer, ~8am PT in winter-ish)
+    - cron: "5 16 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install feedparser
+
+      - name: Update news.json
+        run: python update_news.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add news.json
+          git diff --staged --quiet || (git commit -m "Weekly news update" && git push)
