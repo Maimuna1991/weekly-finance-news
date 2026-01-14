@@ -37,6 +37,8 @@ def main():
             if any(w in title.lower() for w in BLOCK_WORDS):
     continue
 
+
+
             if title and link:
                 pool.append({
                     "title": title,
