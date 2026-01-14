@@ -1,9 +1,28 @@
 {
-  "updated_local": "Not updated yet",
-  "sources": ["RSS"],
+  "updated_local": "Jan 14, 2026 02:53 PM PT",
+  "sources": [
+    "Yahoo Finance - Top Stories",
+    "CNBC - Top News",
+    "MarketWatch - Top Stories"
+  ],
   "items": [
-    { "title": "Waiting for the first weekly update…", "link": "https://github.com", "source": "—", "published": "—" },
-    { "title": "Once the Action runs, real headlines will appear here.", "link": "https://github.com", "source": "—", "published": "—" },
-    { "title": "You can also manually run the Action anytime.", "link": "https://github.com", "source": "—", "published": "—" }
+    {
+      "title": "Why the stock market keeps shrugging as Trump sows more political chaos",
+      "link": "https://www.cnbc.com/2026/01/14/stock-market-investor-powell-fed-sell-america.html",
+      "source": "CNBC - Top News",
+      "published": "Jan 14, 2026"
+    },
+    {
+      "title": "Oil prices fall after Trump signals he could hold off on attacking Iran",
+      "link": "https://www.cnbc.com/2026/01/14/oil-falls-nearly-2percent-after-trump-signals-he-could-hold-off-on-attacking-iran.html",
+      "source": "CNBC - Top News",
+      "published": "Jan 14, 2026"
+    },
+    {
+      "title": "Trump administration clears way for Nvidia H200 chip sales to China with a 25% surcharge",
+      "link": "https://www.cnbc.com/2026/01/14/trump-nvidia-h200-china-ai-chips.html",
+      "source": "CNBC - Top News",
+      "published": "Jan 14, 2026"
+    }
   ]
 }
