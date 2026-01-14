@@ -27,6 +27,7 @@ def main():
     used_sources = []
 
     BLOCK_WORDS = ["election", "politics", "trump", "biden", "campaign"]
+    
     for source, url in FEEDS:
         used_sources.append(source)
         feed = feedparser.parse(url)
@@ -34,7 +35,8 @@ def main():
             title = clean(getattr(e, "title", ""))
             link = clean(getattr(e, "link", ""))
             if any(w in title.lower() for w in BLOCK_WORDS):
-            continue
+    continue
+
             if title and link:
                 pool.append({
                     "title": title,
