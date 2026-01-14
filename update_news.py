@@ -1,6 +1,8 @@
-import json, re
+import json
+import re
 from datetime import datetime
 from zoneinfo import ZoneInfo
+
 import feedparser
 
 # Open RSS feeds (no API key)
@@ -11,33 +13,41 @@ FEEDS = [
     ("AP Business", "https://apnews.com/hub/business?rss=1"),
 ]
 
+# Words to exclude from headlines
+BLOCK_WORDS = ["election", "politics", "trump", "biden", "campaign"]
+
+
 def clean(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "")).strip()
 
+
 def format_date(entry) -> str:
-    # RSS dates vary; keep it simple
+    # RSS dates vary; keep it simple and readable
     for key in ("published_parsed", "updated_parsed"):
         if hasattr(entry, key) and getattr(entry, key):
-            dt = datetime(*getattr(entry, key)[:6], tzinfo=ZoneInfo("UTC")).astimezone(ZoneInfo("America/Los_Angeles"))
+            dt = datetime(
+                *getattr(entry, key)[:6],
+                tzinfo=ZoneInfo("UTC")
+            ).astimezone(ZoneInfo("America/Los_Angeles"))
             return dt.strftime("%b %d, %Y")
     return "—"
 
-def main():
+
+def main() -> None:
     pool = []
     used_sources = []
 
-    BLOCK_WORDS = ["election", "politics", "trump", "biden", "campaign"]
-    
     for source, url in FEEDS:
         used_sources.append(source)
         feed = feedparser.parse(url)
+
         for e in feed.entries[:15]:
             title = clean(getattr(e, "title", ""))
             link = clean(getattr(e, "link", ""))
+
+            # Skip unwanted topics
             if any(w in title.lower() for w in BLOCK_WORDS):
-    continue
-
-
+                continue
 
             if title and link:
                 pool.append({
@@ -47,7 +57,7 @@ def main():
                     "published": format_date(e)
                 })
 
-    # Pick first 3 unique titles
+    # Pick first 3 unique titles (in the order encountered)
     seen = set()
     top = []
     for it in pool:
@@ -73,6 +83,7 @@ def main():
 
     with open("news.json", "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
+
 
 if __name__ == "__main__":
     main()
