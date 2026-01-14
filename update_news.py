@@ -8,6 +8,7 @@ FEEDS = [
     ("Yahoo Finance - Top Stories", "https://feeds.finance.yahoo.com/rss/2.0/headline?s=yhoo&region=US&lang=en-US"),
     ("CNBC - Top News", "https://www.cnbc.com/id/100003114/device/rss/rss.html"),
     ("MarketWatch - Top Stories", "https://feeds.marketwatch.com/marketwatch/topstories/"),
+    ("AP Business", "https://apnews.com/hub/business?rss=1"),
 ]
 
 def clean(s: str) -> str:
@@ -25,6 +26,7 @@ def main():
     pool = []
     used_sources = []
 
+    BLOCK_WORDS = ["election", "politics", "trump", "biden", "campaign"]
     for source, url in FEEDS:
         used_sources.append(source)
         feed = feedparser.parse(url)
