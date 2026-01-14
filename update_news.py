@@ -33,6 +33,8 @@ def main():
         for e in feed.entries[:15]:
             title = clean(getattr(e, "title", ""))
             link = clean(getattr(e, "link", ""))
+            if any(w in title.lower() for w in BLOCK_WORDS):
+            continue
             if title and link:
                 pool.append({
                     "title": title,
