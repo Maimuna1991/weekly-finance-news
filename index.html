@@ -1,32 +1,53 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>Top 3 Financial News – This Week</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Top 3 Financial News (This Week)</title>
   <style>
-    body { font-family: Arial; max-width: 800px; margin: 40px auto; }
-    h1 { color: #003366; }
-    .news { margin-bottom: 20px; }
+    body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 16px; }
+    h1 { color:#003366; margin-bottom: 6px; }
+    .meta { color:#666; margin-bottom: 18px; }
+    .card { border:1px solid #ddd; border-radius:14px; padding:16px; margin:14px 0; }
+    .card a { text-decoration:none; }
+    .src { color:#666; font-size: 0.9rem; margin-top: 6px; }
   </style>
 </head>
 <body>
+  <h1>Top 3 Financial News (This Week)</h1>
+  <div class="meta" id="updated">Loading latest headlines…</div>
 
-<h1>Top 3 Financial News (This Week)</h1>
-<p><em>Updated weekly for class discussion</em></p>
+  <div id="list"></div>
 
-<div class="news">
-  <h3>1. Headline One</h3>
-  <p><a href="#">Read article</a></p>
-</div>
+  <script>
+    async function loadNews(){
+      try{
+        const res = await fetch('./news.json', { cache: 'no-store' });
+        const data = await res.json();
 
-<div class="news">
-  <h3>2. Headline Two</h3>
-  <p><a href="#">Read article</a></p>
-</div>
+        document.getElementById('updated').textContent =
+          `Updated: ${data.updated_local} · Sources: ${data.sources.join(", ")}`;
 
-<div class="news">
-  <h3>3. Headline Three</h3>
-  <p><a href="#">Read article</a></p>
-</div>
+        const list = document.getElementById('list');
+        list.innerHTML = "";
 
+        data.items.forEach((it, i) => {
+          const div = document.createElement('div');
+          div.className = "card";
+          div.innerHTML = `
+            <div><strong>${i+1}.</strong>
+              <a href="${it.link}" target="_blank" rel="noopener noreferrer">${it.title}</a>
+            </div>
+            <div class="src">Source: ${it.source} · Published: ${it.published}</div>
+          `;
+          list.appendChild(div);
+        });
+      } catch (e){
+        document.getElementById('updated').textContent =
+          "Could not load news yet. If you just set this up, wait 1–2 minutes and refresh.";
+      }
+    }
+    loadNews();
+  </script>
 </body>
 </html>
