@@ -1,24 +1,28 @@
 {
   "updated_local": "Instructor selected",
-  "sources": ["My Picks"],
+  "sources": [
+    "Reuters",
+    "Forbes",
+    "Morningstar Indexes"
+  ],
   "items": [
     {
-      "title": "Link 1 (your title here)",
-      "link": "PASTE_LINK_1_HERE",
-      "source": "My Picks",
-      "published": "2026-01-19"
+      "title": "Trump plans financial restrictions on late or overbudget defense contractors, sources say",
+      "link": "https://www.reuters.com/sustainability/boards-policy-regulation/trump-plans-financial-restrictions-late-overbudget-defense-contractors-sources-2025-12-17/",
+      "source": "Reuters",
+      "published": "Dec 17, 2025"
     },
     {
-      "title": "Link 2 (your title here)",
-      "link": "PASTE_LINK_2_HERE",
-      "source": "My Picks",
-      "published": "2026-01-19"
+      "title": "These 3 big dividends just got cut — they’re safer than ever",
+      "link": "https://www.forbes.com/sites/michaelfoster/2025/06/24/these-3-big-dividends-just-got-cut-theyre-safer-than-ever/",
+      "source": "Forbes",
+      "published": "Jun 24, 2025"
     },
     {
-      "title": "Link 3 (your title here)",
-      "link": "PASTE_LINK_3_HERE",
-      "source": "My Picks",
-      "published": "2026-01-19"
+      "title": "Stock buybacks are booming in 2025 — that’s bad news for dividend investors",
+      "link": "https://indexes.morningstar.com/insights/perspective/bltb5182b9245a7714d/stock-buybacks-are-booming-in-2025-thats-bad-news-for-dividend-investors",
+      "source": "Morningstar Indexes",
+      "published": "2025"
     }
   ]
 }
