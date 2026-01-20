@@ -4,26 +4,29 @@
     "Yahoo Finance - Top Stories",
     "CNBC - Top News",
     "MarketWatch - Top Stories",
+    "Reuters",
+    "Forbes",
+    "Morningstar Indexes",
     "AP Business"
   ],
   "items": [
     {
-      "title": "Europe weighs using trade 'bazooka' against the U.S. as Greenland crisis deepens",
-      "link": "https://www.cnbc.com/2026/01/19/europe-retaliatory-tariffs-aci-greenland-trump-threat-us.html",
-      "source": "CNBC - Top News",
-      "published": "Jan 19, 2026"
-    },
-    {
-      "title": "Stellantis stock off 43% as Jeep maker turns five, executes turnaround",
-      "link": "https://www.cnbc.com/2026/01/19/stellantis-stock-stla-five-year-anniversary.html",
-      "source": "CNBC - Top News",
-      "published": "Jan 19, 2026"
-    },
-    {
-      "title": "New $6,000 senior deduction offers an ‘incredible, valuable opportunity,’ CPA says: How to make the most of it",
-      "link": "https://www.cnbc.com/2026/01/18/big-beautiful-bill-senior-deduction.html",
-      "source": "CNBC - Top News",
-      "published": "Jan 18, 2026"
-    }
+  "title": "Trump plans financial restrictions on late or overbudget defense contractors, sources say",
+  "link": "https://www.reuters.com/sustainability/boards-policy-regulation/trump-plans-financial-restrictions-late-overbudget-defense-contractors-sources-2025-12-17/?utm_source=chatgpt.com",
+  "source": "Reuters",
+  "published": "Dec 17, 2025"
+},
+{
+  "title": "These 3 big dividends just got cut — they’re safer than ever",
+  "link": "https://www.forbes.com/sites/michaelfoster/2025/06/24/these-3-big-dividends-just-got-cut-theyre-safer-than-ever/",
+  "source": "Forbes",
+  "published": "Jun 24, 2025"
+},
+{
+  "title": "Stock buybacks are booming in 2025 — that’s bad news for dividend investors",
+  "link": "https://indexes.morningstar.com/insights/perspective/bltb5182b9245a7714d/stock-buybacks-are-booming-in-2025-thats-bad-news-for-dividend-investors",
+  "source": "Morningstar Indexes",
+  "published": "2025"
+}
   ]
 }
