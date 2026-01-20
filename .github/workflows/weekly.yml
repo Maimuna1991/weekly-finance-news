@@ -1,6 +1,6 @@
 name: Weekly Finance News Update
 
-on:
+on: []
   schedule:
     # Runs every Monday at 16:05 UTC (~8am PT in summer, ~8am PT in winter-ish)
     - cron: "5 16 * * 1"
