@@ -1,29 +1,24 @@
 {
-  "updated_local": "Jan 19, 2026 06:48 PM PT",
-  "sources": [
-    "Yahoo Finance - Top Stories",
-    "CNBC - Top News",
-    "MarketWatch - Top Stories",
-    "AP Business"
-  ],
+  "updated_local": "Instructor selected",
+  "sources": ["My Picks"],
   "items": [
     {
-      "title": "China keeps benchmark lending rates unchanged despite slowing economic growth",
-      "link": "https://www.cnbc.com/2026/01/20/china-lending-rates-lpr-slowing-economic-growth.html",
-      "source": "CNBC - Top News",
-      "published": "Jan 19, 2026"
+      "title": "Link 1 (your title here)",
+      "link": "PASTE_LINK_1_HERE",
+      "source": "My Picks",
+      "published": "2026-01-19"
     },
     {
-      "title": "No fear of 'cockroaches'? Private credit funds raise billions as investors look past warnings",
-      "link": "https://www.cnbc.com/2026/01/20/private-credit-warnings-dismissed-as-industry-continues-to-raise-billions.html",
-      "source": "CNBC - Top News",
-      "published": "Jan 19, 2026"
+      "title": "Link 2 (your title here)",
+      "link": "PASTE_LINK_2_HERE",
+      "source": "My Picks",
+      "published": "2026-01-19"
     },
     {
-      "title": "China's stock market 'overheats' amid record high turnover — and regulators are getting worried",
-      "link": "https://www.cnbc.com/2026/01/20/chinas-stock-market-overheats-amid-record-high-turnover.html",
-      "source": "CNBC - Top News",
-      "published": "Jan 19, 2026"
+      "title": "Link 3 (your title here)",
+      "link": "PASTE_LINK_3_HERE",
+      "source": "My Picks",
+      "published": "2026-01-19"
     }
   ]
 }
