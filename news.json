@@ -4,26 +4,29 @@
     "Yahoo Finance - Top Stories",
     "CNBC - Top News",
     "MarketWatch - Top Stories",
-    "AP Business"
+    "AP Business",
+    "Reuters",
+  "Forbes",
+  "Morningstar Indexes",
   ],
   "items": [
     {
-      "title": "China keeps benchmark lending rates unchanged despite slowing economic growth",
-      "link": "https://www.cnbc.com/2026/01/20/china-lending-rates-lpr-slowing-economic-growth.html",
-      "source": "CNBC - Top News",
-      "published": "Jan 19, 2026"
-    },
-    {
-      "title": "No fear of 'cockroaches'? Private credit funds raise billions as investors look past warnings",
-      "link": "https://www.cnbc.com/2026/01/20/private-credit-warnings-dismissed-as-industry-continues-to-raise-billions.html",
-      "source": "CNBC - Top News",
-      "published": "Jan 19, 2026"
-    },
-    {
-      "title": "China's stock market 'overheats' amid record high turnover — and regulators are getting worried",
-      "link": "https://www.cnbc.com/2026/01/20/chinas-stock-market-overheats-amid-record-high-turnover.html",
-      "source": "CNBC - Top News",
-      "published": "Jan 19, 2026"
-    }
+  "title": "Trump plans financial restrictions on late or overbudget defense contractors, sources say",
+  "link": "https://www.reuters.com/sustainability/boards-policy-regulation/trump-plans-financial-restrictions-late-overbudget-defense-contractors-sources-2025-12-17/?utm_source=chatgpt.com",
+  "source": "Reuters",
+  "published": "Dec 17, 2025"
+},
+{
+  "title": "These 3 big dividends just got cut — they’re safer than ever",
+  "link": "https://www.forbes.com/sites/michaelfoster/2025/06/24/these-3-big-dividends-just-got-cut-theyre-safer-than-ever/",
+  "source": "Forbes",
+  "published": "Jun 24, 2025"
+},
+{
+  "title": "Stock buybacks are booming in 2025 — that’s bad news for dividend investors",
+  "link": "https://indexes.morningstar.com/insights/perspective/bltb5182b9245a7714d/stock-buybacks-are-booming-in-2025-thats-bad-news-for-dividend-investors",
+  "source": "Morningstar Indexes",
+  "published": "2025"
+}
   ]
 }
